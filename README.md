@@ -10,3 +10,15 @@ query=`curl -c ./cookie.txt -s -L "https://drive.google.com/uc?export=download&i
 url="https://drive.google.com$query"
 curl -b ./cookie.txt -L -o ${filename} $url
 ```
+### Level 1 
+```
+1) ./john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=rockyou.txt <hashes> (Udita)
+2) .. (Davinder) 
+3) Python script to decrypt level (Joanna, Kavish)
+
+
+```
+### Level 2 
+```
+1) ./john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=fourfour.wordlist <hashes> (Udita)
+```
