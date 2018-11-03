@@ -49,7 +49,7 @@ nvidia-opencl-dev \
 libopenmpi-dev openmpi-bin
 cd ~
 git clone git://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo john
-cd john
+cd john/src
 ./configure --enable-mpi && make -s clean && make -sj4
 ```
 ### Level 1 
