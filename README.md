@@ -1,13 +1,13 @@
 # CS4400
-## Scripts Cheatsheet
-### Extract one type of hashes from levelX.json
+## Scripts Cheat sheet
+#### Extract one type of hashes from levelX.json
 -Davinder
 ```
 type="sha1"
 jsonfile="levelX.json"
 grep $type < $jsonfile | sed -E "s/^ *\"(.*)\",?/\1/g" > hashes-${type}.txt
 ```
-### Brute Force Masks - 5 characters (Pattern: exactly one digit, atleast one vowel)
+#### Brute Force Masks - 5 characters (Pattern: exactly one digit, atleast one vowel)
 -Davinder
 ```
 format=sha1format
@@ -25,7 +25,7 @@ do
 done
 ```
 
-## Download files from Google Drive
+#### Download files from Google Drive
 -Udita
 ```
 filename="fourfour.wordlist"
