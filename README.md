@@ -1,14 +1,14 @@
 # CS4400
 ## Scripts Cheatsheet
 ### Extract one type of hashes from levelX.json
-- Davinder
+-Davinder
 ```
 type="sha1"
 jsonfile="levelX.json"
 grep $type < $jsonfile | sed -E "s/^ *\"(.*)\",?/\1/g" > hashes-${type}.txt
 ```
 ### Brute Force Masks - 5 characters (Pattern: exactly one digit, atleast one vowel)
-- Davinder
+-Davinder
 ```
 format=sha1format
 hashes=hashfile
