@@ -36,6 +36,19 @@ query=`curl -c ./cookie.txt -s -L "https://drive.google.com/uc?export=download&i
 url="https://drive.google.com$query"
 curl -b ./cookie.txt -L -o ${filename} $url
 ```
+
+### Install JTR Bleeding Jumbo
+-Davinder
+```
+sudo apt-get install build-essential libssl-dev git zlib1g-dev
+sudo apt-get install yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
+sudo apt-get install nvidia-opencl-dev
+sudo apt-get install libopenmpi-dev openmpi-bin
+cd ~
+git clone git://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo john
+cd john
+./configure --enable-mpi && make -s clean && make -sj4
+```
 ### Level 1 
 ```
 1) ./john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=rockyou.txt <hashes> (Udita)
