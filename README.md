@@ -30,6 +30,6 @@ curl -b ./cookie.txt -L -o ${filename} $url
 | Hash | Count |
 | --- | --- |
 | PBKDF2 | 34/34 |
-| sha1 | 10/37 |
-| sha512 | 0/86 |
-| argon2 | 0/71 |
+| sha1 | 37/37 |
+| sha512 | 0/34 |
+| argon2 | 0/45 |
