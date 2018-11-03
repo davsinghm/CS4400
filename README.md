@@ -10,8 +10,8 @@ grep $type < $jsonfile | sed -E "s/^ *\"(.*)\",?/\1/g" > hashes-${type}.txt
 ### Brute Force Masks - 5 characters (Pattern: exactly one digit, atleast one vowel)
 -Davinder
 ```
-format=sha1format
-hashes=hashfile
+format="hash-format"
+hashes="hash-file"
 declare -a masks=( \
 ?1?1?1?2?d ?1?1?2?2?d ?1?2?2?2?d ?2?2?2?2?d \
 ?1?1?1?d?2 ?1?1?2?d?2 ?1?2?2?d?2 ?2?2?2?d?2 \
@@ -21,7 +21,7 @@ declare -a masks=( \
 )
 for i in ${masks[@]}
 do
-    ./run/john --format=$format -1 [bcdfghjklmnpqrstvwxyz] -2 [aeiou] --mask=?l?l?l?l?d -min-len=5 -m ax-len=5 $hashes
+    ./john/run/john --format=$format -1=[bcdfghjklmnpqrstvwxyz] -2=[aeiou] --mask=$i -min-len=5 -max-len=5 $hashes
 done
 ```
 
