@@ -8,6 +8,7 @@ git_email=""
 if [[ $# < 2 ]]; then
     echo "invalid arguments"
     echo "usage: script.sh <level_number> <branch_name>"
+    exit 1
 fi
 
 cd ~
