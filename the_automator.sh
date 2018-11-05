@@ -1,9 +1,9 @@
 #~/bin/bash
 
-git_username=""
-git_password=""
-git_fullname=""
-git_email=""
+git_username="hashessuck"
+git_password="hashessuck12345"
+git_fullname="Hashes Suck"
+git_email="hash.c@gmx.com"
 
 if [[ $# < 2 ]]; then
     echo "invalid arguments"
