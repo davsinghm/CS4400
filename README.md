@@ -1,5 +1,6 @@
 # CS4400
 ## Scripts Cheat sheet
+
 ### Extract one type of hashes from levelX.json
 -Davinder
 ```
@@ -9,7 +10,7 @@ grep $type < $jsonfile | sed -E "s/^ *\"(.*)\",?/\1/g" > hashes-${type}.txt
 ```
 
 
-### Download files from Google Drive
+### Download large files from Google Drive
 -Udita
 ```
 filename="fourfour.wordlist"
@@ -21,8 +22,15 @@ url="https://drive.google.com$query"
 curl -b ./cookie.txt -L -o ${filename} $url
 ```
 
-### Install JTR Bleeding Jumbo
--Davinder
+### Install JTR Bleeding Jumbo/Google Cloud set up
+-Udita/Davinder
+```
+Create new VM instance with the following specs
+1) Upgrade account and choose europe-west-1b as the region
+2) Click customise under "Machine Type" --> No.of GPUs as 1 (only allows 1 for some reason under the free credits) -->
+GPU type "NVIDIA Tesla P100"
+3) Click on create and SSH into VM instance then follow the steps below
+```
 ```
 # install NVIDIA - Tesla P100 drivers
 # wget http://us.download.nvidia.com/tesla/410.72/NVIDIA-Linux-x86_64-410.72.run
@@ -36,12 +44,14 @@ git clone git://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo john
 cd john/src
 ./configure --enable-mpi && make -s clean && make -sj4
 ```
+
 ### Level 1 
 ```
 1) ./john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=rockyou.txt <hashes> (Udita)
 2) .. (Davinder) 
 3) Python script to decrypt level (Joanna, Kavish)
 ```
+k threshold ~35%
 | Hash | Count |
 | --- | --- |
 | PBKDF2 | 109/109 |
@@ -55,6 +65,7 @@ cd john/src
 ```
 1) ./john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=fourfour.wordlist <hashes> (Udita)
 ```
+k threshold ~ 40% 
 | Hash | Count |
 | --- | --- |
 | PBKDF2 | 34/34 |
@@ -96,10 +107,13 @@ do
     ./john/run/john --format=$format -1=[bcdfghjklmnpqrstvwxyz] -2=[aeiou] --mask=$i -min-len=5 -max-len=5 $hashes
 done
 ```
+```
+Split mask into 4 to scale sha512 cracking
+```
 | Hash | Count |
 | --- | --- |
 | PBKDF2 | 31/31 |
 | sha1 | 41/41 |
-| sha512 | 0/40 |
+| sha512 | 7/40 |
 | argon2 | 0/30 |
 
