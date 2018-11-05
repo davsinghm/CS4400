@@ -51,6 +51,9 @@ load_other_pots() {
     echo 
     echo ">> Merged Potfile Lines: " $(wc -l < $potall)
     echo
+    python2.7 ~/${git_repo}/infernocode-v1.1.py -i ~/level${level}.json -p $potall
+    echo
+    sleep infinity
     #cat $potall
 }
 
