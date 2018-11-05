@@ -113,10 +113,29 @@ done
 ```
 Split mask into 4 to scale sha512 cracking
 ```
+```
+k threshold 56%
+```
 | Hash | Count |
 | --- | --- |
 | PBKDF2 | 31/31 |
 | sha1 | 41/41 |
-| sha512 | 7/40 |
+| sha512 | 8/40 |
 | argon2 | 0/30 |
+
+### Level 4
+
+Passwords list crawled from scss and tcd.ie website
+```
+k threshold 56%
+```
+| Hash | Count |
+| --- | --- |
+| PBKDF2 | 42/42 |
+| sha1 | 34/34|
+
+### Level 5
+
+Passwords list consists of submitty usernames
+
 
