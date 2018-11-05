@@ -131,7 +131,7 @@ k threshold 56%
 
 Passwords list crawled from scss and tcd.ie website
 ```
-k threshold 56%
+k threshold 46%
 ```
 | Hash | Count |
 | --- | --- |
@@ -141,5 +141,17 @@ k threshold 56%
 ### Level 5
 
 Passwords list consists of submitty usernames
+
+Cracked usernames listed on cs7ns1 git Team.md
+https://github.com/sftcd/cs7ns1/blob/master/assignments/practical5/TeamSelection.md
+
+```
+k threshold 32%
+```
+
+### Level 6
+
+Easter egg : Another rockyou?
+
 
 
