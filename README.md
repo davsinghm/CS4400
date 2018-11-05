@@ -110,8 +110,12 @@ do
     ./john/run/john --format=$format -1=[bcdfghjklmnpqrstvwxyz] -2=[aeiou] --mask=$i -min-len=5 -max-len=5 $hashes
 done
 ```
+(Udita) for cracking sha512
 ```
-Split mask into 4 to scale sha512 cracking
+Split wordlist generated using python code into the following lists
+1) 5 letter words with exactly 2 vowels, 1 digit and the digit at the last place
+2) 5 letter words with exactly 2 vowels, 1 digit and the digit at the second last place
+3) 5 letter words with exactly 2 vowels, 1 digit and the digit at the third last place
 ```
 ```
 k threshold 56%
