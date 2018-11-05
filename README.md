@@ -27,8 +27,9 @@ curl -b ./cookie.txt -L -o ${filename} $url
 ```
 Create new VM instance with the following specs
 1) Upgrade account and choose europe-west-1b as the region
-2) Click customise under "Machine Type" --> No.of GPUs as 1 (only allows 1 for some reason under the free credits) -->
-GPU type "NVIDIA Tesla P100"
+2) Click customise under "Machine Type"
+   -No.of GPUs as "1" (only allows 1 for some reason under the free credits) 
+   -GPU type as "NVIDIA Tesla P100"
 3) Click on create and SSH into VM instance then follow the steps below
 ```
 ```
@@ -50,8 +51,9 @@ cd john/src
 1) ./john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=rockyou.txt <hashes> (Udita)
 2) .. (Davinder) 
 3) Python script to decrypt level (Joanna, Kavish)
-```
+
 k threshold ~35%
+```
 | Hash | Count |
 | --- | --- |
 | PBKDF2 | 109/109 |
@@ -64,8 +66,9 @@ k threshold ~35%
 4+4 wordlist attack
 ```
 1) ./john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=fourfour.wordlist <hashes> (Udita)
-```
+
 k threshold ~ 40% 
+```
 | Hash | Count |
 | --- | --- |
 | PBKDF2 | 34/34 |
