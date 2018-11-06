@@ -8,7 +8,7 @@ automatically upload pot files to this git repo, to *your* branch, from your ser
 run this in parallel to John or Hashcat.
 
 the following files should be in current directory:
-level<level_no>.json
+level<level_no>.json,
 john<level>.pot or hashcat<level>.pot
 
 e.g. for level 5:
@@ -16,7 +16,7 @@ e.g. for level 5:
 wget https://github.com/dsmudhar/CS4400/raw/master/level5.json -O level5.json
 wget https://github.com/dsmudhar/CS4400/raw/master/the_automator.sh -O the_automator.sh
 chmod +x ./the_automator.sh
-./the_automator.sh 5 pot_dasingh
+./the_automator.sh 5 pot_username
 ```
 
 ### Clean Hashes for Level 8
