@@ -1,7 +1,7 @@
 # CS4400
 ## Scripts Cheat sheet
 
-### The Automator
+### [The Automator](https://github.com/dsmudhar/CS4400/blob/master/the_automator.sh)
 *- Davinder*
 
 automatically upload pot files to this git repo, to *your* branch, from your server, and checks if level is complete.
