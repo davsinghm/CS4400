@@ -20,7 +20,7 @@ chmod +x ./the_automator.sh
 ```
 
 ### Clean Hashes for Level 8
--Kavish
+*- Kavish*
 
 ```
 list_final = []
@@ -50,7 +50,7 @@ with open('des_broken_f','w') as f:
 ```
 
 ### Extract one type of hashes from levelX.json
--Davinder
+*- Davinder*
 ```
 type="sha1"
 jsonfile="levelX.json"
@@ -59,7 +59,7 @@ grep $type < $jsonfile | sed -E "s/^ *\"(.*)\",?/\1/g" > hashes-${type}.txt
 
 
 ### Download large files from Google Drive
--Udita
+*- Udita*
 ```
 filename="fourfour.wordlist"
 file_id="1RM93c8xWyWL1rIQWRbxjT2uAKU5D70BD"
@@ -71,7 +71,7 @@ curl -b ./cookie.txt -L -o ${filename} $url
 ```
 
 ### Install JTR Bleeding Jumbo/Google Cloud set up
--Udita
+*- Udita*
 ```
 Create new VM instance with the following specs
 1) Upgrade account and choose europe-west-1b as the region
@@ -80,7 +80,7 @@ Create new VM instance with the following specs
    -GPU type as "NVIDIA Tesla P100"
 3) Click on create and SSH into VM instance then follow the steps below
 ```
--Davinder
+*- Davinder*
 ```
 # install NVIDIA - Tesla P100 drivers
 # wget http://us.download.nvidia.com/tesla/410.72/NVIDIA-Linux-x86_64-410.72.run
