@@ -131,7 +131,7 @@ k threshold 56%
 
 Passwords list crawled from scss and tcd.ie website
 ```
-k threshold 46%
+k threshold ~46%
 ```
 | Hash | Count |
 | --- | --- |
@@ -146,12 +146,21 @@ Cracked usernames listed on cs7ns1 git Team.md
 https://github.com/sftcd/cs7ns1/blob/master/assignments/practical5/TeamSelection.md
 
 ```
-k threshold 32%
+k threshold ~32%
 ```
 
 ### Level 6
 
 Easter egg : Another rockyou?
 
+Dictionary attack using rockyou list split into lengths 5,6,7,8
+```
+k threshold ~32%
+```
+
+| Hash | Count |
+| --- | --- |
+| PBKDF2 | 51/51 |
+| sha1 | 21/48|
 
 
