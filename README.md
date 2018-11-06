@@ -1,6 +1,35 @@
 # CS4400
 ## Scripts Cheat sheet
 
+### Clean Hashes for Level 8
+- Kavish 
+'''
+list_final = []
+list_temp_apend  = []
+list_temp_deleted = []
+list_hash = []
+with open('level7.pot','r') as temp:
+    list_pot = temp.readlines()
+temp.close()
+list_hash = [i.split()[0] for i in list_pot]
+list_pass = [i.split()[1] for i in list_pot]
+
+for i,j in zip(list_hash,list_pass):
+    if len(j) != 8 and '/' not in j and '\' not in j :
+        list_hash.append(i)
+        list_temp_apend.append(j)    
+    else:
+        
+        list_temp_deleted.append(j)
+
+for l,m in zip(list_hash,list_temp):
+    list_final.append(l + ":" + m )
+    
+with open('des_broken_f','w') as f:
+    for item in list_final:
+        f.writelines(item)
+'''    
+
 ### Extract one type of hashes from levelX.json
 -Davinder
 ```
