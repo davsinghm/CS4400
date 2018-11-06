@@ -137,7 +137,7 @@ Passwords length 5 with atleast
 ```
 1) ./john  --format=PBKDF2-HMAC-SHA256-opencl --mask=?l?l?l?l?d  -min-len=5 -max-len=5 --pot=level3.hashes <hashes> (Udita)
 ```
-### Brute Force Masks - 5 characters (Pattern: exactly one digit, atleast one vowel)
+#### Brute Force Masks optimised from one above
 *- Davinder*
 ```
 format="hash-format"
