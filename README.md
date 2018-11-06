@@ -1,6 +1,43 @@
 # CS4400
 ## Scripts Cheat sheet
-
+### Crackstation Divider
+```
+list_5 = []
+list_6  = []
+list_7 = []
+list_8 = []
+list_unknown_length = []
+with open('crackstation.txt','r') as temp:
+    list_pass = temp.readlines()
+temp.close()
+for i in list_pass:
+    if len(i) == 5 :
+        list_5.append(i)
+    elif len(i) == 6:
+    	list_6.append(i)
+    elif len(i) == 7:
+    	list_7.append(i)
+    elif len(i) == 8:
+    	list_8.append(i)
+    else:
+    	list_unknown_length.append(i)		
+    
+with open('crack_5.txt','w') as f:
+    for item in list_5:
+        f.writelines(item)    
+with open('crack_6.txt','w') as f:
+    for item in list_6:
+        f.writelines(item)
+with open('crack_7.txt','w') as f:
+    for item in list_7:
+        f.writelines(item)
+with open('crack_8.txt','w') as f:
+    for item in list_8:
+        f.writelines(item)
+with open('crack_unknown_length.txt','w') as f:
+    for item in list_unknown_length:
+        f.writelines(item)
+```
 ### [The Automator](https://github.com/dsmudhar/CS4400/blob/master/the_automator.sh)
 *- Davinder*
 
