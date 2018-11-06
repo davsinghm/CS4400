@@ -8,8 +8,8 @@ automatically upload pot files to this git repo, to *your* branch, from your ser
 run this in parallel to John or Hashcat.
 
 the following files should be in current directory:
-level<level_no>.json,
-john<level>.pot or hashcat<level>.pot
+level&lt;level_no&gt;.json,
+john&lt;level_no&gt;.pot or hashcat&lt;level_no&gt;pot
 
 e.g. for level 5:
 ```
