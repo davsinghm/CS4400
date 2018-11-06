@@ -1,8 +1,25 @@
 # CS4400
 ## Scripts Cheat sheet
 
+### The Automator
+-Davinder
+automatically upload pot files to this git repo from your server, and checks if level is complete.
+run this in parallel to John or Hashcat.
+
+the following files should be in current directory:
+level<level_no>.json
+john<level>.pot or hashcat<level>.pot
+
+e.g. for level 5:
+```
+wget https://github.com/dsmudhar/CS4400/raw/master/level5.json -O level5.json
+wget https://github.com/dsmudhar/CS4400/raw/master/the_automator.sh -O the_automator.sh
+chmod +x ./the_automator.sh
+./the_automator.sh 5 pot_dasingh
+```
+
 ### Clean Hashes for Level 8
-- Kavish 
+-Kavish
 
 ```
 list_final = []
@@ -29,7 +46,7 @@ for l,m in zip(list_hash,list_temp):
 with open('des_broken_f','w') as f:
     for item in list_final:
         f.writelines(item)
-```   
+```
 
 ### Extract one type of hashes from levelX.json
 -Davinder
