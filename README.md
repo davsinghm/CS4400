@@ -70,15 +70,18 @@ url="https://drive.google.com$query"
 curl -b ./cookie.txt -L -o ${filename} $url
 ```
 
-### Install JTR Bleeding Jumbo/Google Cloud set up
+### Install JTR Bleeding Jumbo/Google Cloud/RH set up
 *- Udita*
+
+Follow steps for setting up google cloud or RH [here](https://github.com/uditar/CS7NS1/blob/master/README.md)
+We will be using google cloud for this assignment
 ```
 Create new VM instance with the following specs
 1) Upgrade account and choose europe-west-1b as the region
 2) Click customise under "Machine Type"
-   -No.of GPUs as "1" (only allows 1 for some reason under the free credits) 
+   -No.of GPUs as "1" (only allows 1 P100 for some reason under the free credits) 
    -GPU type as "NVIDIA Tesla P100"
-3) Click on create and SSH into VM instance then follow the steps below
+3) Click on create and SSH into VM instance
 ```
 *- Davinder*
 ```
@@ -212,3 +215,30 @@ k threshold ~32%
 | PBKDF2 | 51/51 |
 | sha1 | 21/48|
 
+### Level 7
+
+Easter egg : keyboard patterns
+
+Dictionary attack using various lists found online or shared by other teams can be found [here](https://drive.google.com/drive/folders/1rqc4wC70-2YyKGpK1Evy70Kwpezgt9Q3?usp=sharing)
+
+| Hash | Count |
+| --- | --- |
+| PBKDF2 | 40/48 |
+| sha1 | 39/40|
+
+### Level 8
+
+Easter egg : bleedin' rockyou
+
+Dictionary attack using rockyou.txt split into lists with length 5,6,7,8 words can be found [here](https://drive.google.com/drive/folders/1svOW2vNFLCOjAtKDKmk1yQXM62FL4ZrD?usp=sharing)
+
+| Hash | Count |
+| --- | --- |
+| PBKDF2 | 40/48 |
+| sha1 | 39/40|
+
+
+### Level 9
+
+Easter egg : crackstation.txt
+15gb wordlist split into lists with length with length 5,6,7,8 words can be found [here]()
