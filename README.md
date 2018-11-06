@@ -3,7 +3,8 @@
 
 ### Clean Hashes for Level 8
 - Kavish 
-'''
+
+```
 list_final = []
 list_temp_apend  = []
 list_temp_deleted = []
@@ -28,7 +29,7 @@ for l,m in zip(list_hash,list_temp):
 with open('des_broken_f','w') as f:
     for item in list_final:
         f.writelines(item)
-'''    
+```   
 
 ### Extract one type of hashes from levelX.json
 -Davinder
