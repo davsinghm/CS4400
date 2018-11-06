@@ -2,7 +2,7 @@
 ## Scripts Cheat sheet
 
 ### The Automator
--Davinder
+- Davinder
 automatically upload pot files to this git repo from your server, and checks if level is complete.
 run this in parallel to John or Hashcat.
 
@@ -19,7 +19,7 @@ chmod +x ./the_automator.sh
 ```
 
 ### Clean Hashes for Level 8
--Kavish
+- Kavish
 
 ```
 list_final = []
@@ -49,7 +49,7 @@ with open('des_broken_f','w') as f:
 ```
 
 ### Extract one type of hashes from levelX.json
--Davinder
+- Davinder
 ```
 type="sha1"
 jsonfile="levelX.json"
@@ -58,7 +58,7 @@ grep $type < $jsonfile | sed -E "s/^ *\"(.*)\",?/\1/g" > hashes-${type}.txt
 
 
 ### Download large files from Google Drive
--Udita
+- Udita
 ```
 filename="fourfour.wordlist"
 file_id="1RM93c8xWyWL1rIQWRbxjT2uAKU5D70BD"
@@ -70,7 +70,7 @@ curl -b ./cookie.txt -L -o ${filename} $url
 ```
 
 ### Install JTR Bleeding Jumbo/Google Cloud set up
--Udita/Davinder
+- Udita
 ```
 Create new VM instance with the following specs
 1) Upgrade account and choose europe-west-1b as the region
@@ -79,6 +79,7 @@ Create new VM instance with the following specs
    -GPU type as "NVIDIA Tesla P100"
 3) Click on create and SSH into VM instance then follow the steps below
 ```
+- Davinder
 ```
 # install NVIDIA - Tesla P100 drivers
 # wget http://us.download.nvidia.com/tesla/410.72/NVIDIA-Linux-x86_64-410.72.run
@@ -128,7 +129,6 @@ k threshold ~ 40%
 Passwords length 5 with atleast 
 -1 digit in one of the last 3 places
 -1 vowel
-
 
 ```
 1) ./john  --format=PBKDF2-HMAC-SHA256-opencl --mask=?l?l?l?l?d  -min-len=5 -max-len=5 --pot=level3.hashes <hashes> (Udita)
@@ -195,7 +195,6 @@ https://github.com/sftcd/cs7ns1/blob/master/assignments/practical5/TeamSelection
 ```
 k threshold ~32%
 ```
-
 ### Level 6
 
 Easter egg : Another rockyou?
@@ -209,5 +208,4 @@ k threshold ~32%
 | --- | --- |
 | PBKDF2 | 51/51 |
 | sha1 | 21/48|
-
 
