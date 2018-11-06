@@ -163,9 +163,9 @@ done
 ```
 *- Udita*
 
-for cracking sha512
+Optimise for cracking sha512 : Creating custom wordlists
 ```
-Split wordlist generated using python code into the following lists
+Generate wordlist using python code and split into the following lists
 1) 5 letter words with exactly 2 vowels, 1 digit and the digit at the last place
 2) 5 letter words with exactly 2 vowels, 1 digit and the digit at the second last place
 3) 5 letter words with exactly 2 vowels, 1 digit and the digit at the third last place
