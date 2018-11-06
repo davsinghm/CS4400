@@ -135,7 +135,7 @@ Passwords length 5 with atleast
 1) ./john  --format=PBKDF2-HMAC-SHA256-opencl --mask=?l?l?l?l?d  -min-len=5 -max-len=5 --pot=level3.hashes <hashes> (Udita)
 ```
 ### Brute Force Masks - 5 characters (Pattern: exactly one digit, atleast one vowel)
--Davinder
+*- Davinder*
 ```
 format="hash-format"
 hashes="hash-file"
@@ -158,7 +158,9 @@ do
     ./john/run/john --format=$format -1=[bcdfghjklmnpqrstvwxyz] -2=[aeiou] --mask=$i -min-len=5 -max-len=5 $hashes
 done
 ```
-(Udita) for cracking sha512
+*- Udita*
+
+for cracking sha512
 ```
 Split wordlist generated using python code into the following lists
 1) 5 letter words with exactly 2 vowels, 1 digit and the digit at the last place
