@@ -1,4 +1,4 @@
-#~/bin/bash
+#!/bin/bash
 
 git_username="hashessuck"
 git_password="hashessuck12345"
