@@ -278,4 +278,23 @@ Dictionary attack using rockyou.txt split into lists with length 5,6,7,8 words c
 ### Level 9
 
 Easter egg : crackstation.txt
-15gb wordlist split into lists with length with length 5,6,7,8 words can be found [here]()
+
+15GB wordlist split into lists with length with length 5,6,7,8 
+And futher split into wordlist containing just numbers, just lowercase alphabets and so on using the bash scripts below
+
+```
+cat crackstation.txt | grep -oE ".{7,7}" > crackstation7.txt
+
+cat crackstation7.txt | grep -oE "^[a-z]{7,7}$" > cracknew7.txt
+cat crackstation7.txt | grep -oE "^[a-zA-Z]{7,7}$" > cracknew7.txt
+cat crackstation7.txt | grep -oE "^[a-zA-Z0-9]{7,7}$" > cracknew7.txt .. so on
+```
+Running instances on Rosetta Hub, Google cloud VM using 4 Tesla v100 machines and 4 nodes on each instance.
+```
+./john --format=sha1crypt-opencl --wordlist=cracknew7.txt --dev=0,1,2,3 --fork=4 level9.hashes
+
+```
+| Hash | Count |
+| --- | --- |
+| PBKDF2 | 32/36 |
+| sha1 | 15/31|
