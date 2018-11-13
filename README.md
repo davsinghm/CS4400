@@ -290,6 +290,7 @@ cat crackstation7.txt | grep -oE "^[a-zA-Z]{7,7}$" > cracknew7.txt
 cat crackstation7.txt | grep -oE "^[a-zA-Z0-9]{7,7}$" > cracknew7.txt .. so on
 ```
 Running instances on Rosetta Hub, Google cloud VM using 4 Tesla v100 machines and 4 nodes on each instance.
+v100 instances unavailble since Nov 10.
 ```
 ./john --format=sha1crypt-opencl --wordlist=cracknew7.txt --dev=0,1,2,3 --fork=4 level9.hashes
 
@@ -297,4 +298,4 @@ Running instances on Rosetta Hub, Google cloud VM using 4 Tesla v100 machines an
 | Hash | Count |
 | --- | --- |
 | PBKDF2 | 32/36 |
-| sha1 | 15/31|
+| sha1 | 20/31|
