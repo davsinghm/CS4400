@@ -298,4 +298,5 @@ v100 instances unavailble since Nov 10.
 | Hash | Count |
 | --- | --- |
 | PBKDF2 | 32/36 |
-| sha1 | 20/31|
+| sha1 | 29/31|
+| sha1 | 0/41|
