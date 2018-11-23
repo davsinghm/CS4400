@@ -153,6 +153,7 @@ k threshold ~35%
 ### Level 2 
 
 4+4 wordlist attack
+*- Udita*
 ```
 1) ./john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=fourfour.wordlist <hashes> (Udita)
 
@@ -170,7 +171,7 @@ k threshold ~ 40%
 Passwords length 5 with atleast 
 -1 digit in one of the last 3 places
 -1 vowel
-
+*- Udita*
 ```
 1) ./john  --format=PBKDF2-HMAC-SHA256-opencl --mask=?l?l?l?l?d  -min-len=5 -max-len=5 --pot=level3.hashes <hashes> (Udita)
 ```
