@@ -1,7 +1,7 @@
 # CS4400
 ## Scripts Cheat sheet
 ### Crackstation Divider
-```
+```*-Kavish*
 list_5 = []
 list_6  = []
 list_7 = []
@@ -54,6 +54,12 @@ wget https://github.com/dsmudhar/CS4400/raw/master/level5.json -O level5.json
 wget https://github.com/dsmudhar/CS4400/raw/master/the_automator.sh -O the_automator.sh
 chmod +x ./the_automator.sh
 ./the_automator.sh 5 pot_username
+```
+
+### Extract 5 char dictionary with alphanumeric characters
+*- Kavish*
+```
+awk'$1~/^[0-9a-zA-Z]+$/' <filename>|grep -o -w '\w\{5,5\}'> <filename>
 ```
 
 ### Clean Hashes for Level 8
@@ -175,6 +181,10 @@ Passwords length 5 with atleast
 ```
 1) ./john  --format=PBKDF2-HMAC-SHA256-opencl --mask=?l?l?l?l?d  -min-len=5 -max-len=5 --pot=level3.hashes <hashes> (Udita)
 ```
+*-Kavish*
+```
+1) ./john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=rockyou.txt <hashes> (Kavish)
+```
 #### Brute Force Masks optimised from one above
 *- Davinder*
 ```
@@ -200,6 +210,7 @@ do
 done
 ```
 *- Udita*
+*- Kavish*
 
 Optimise for cracking sha512 : Creating custom wordlists
 ```
@@ -269,6 +280,9 @@ Dictionary attack using various lists found online or shared by other teams can 
 Easter egg : bleedin' rockyou
 
 Dictionary attack using rockyou.txt split into lists with length 5,6,7,8 words can be found [here](https://drive.google.com/drive/folders/1svOW2vNFLCOjAtKDKmk1yQXM62FL4ZrD?usp=sharing)
+```
+1)./john --format=sha1crypt-opencl --wordlist=cracknew7.txt --dev=0,1 --fork=2 <hashes> (Kavish)
+```
 
 | Hash | Count |
 | --- | --- |
