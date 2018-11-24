@@ -1,7 +1,8 @@
 # CS4400
 ## Scripts Cheat sheet
 ### Crackstation Divider
-```*-Kavish*
+*-Kavish*
+```
 list_5 = []
 list_6  = []
 list_7 = []
