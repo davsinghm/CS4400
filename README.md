@@ -148,7 +148,7 @@ cd john/src
 2) .. (Davinder) 
 3) Python script to decrypt level (Joanna, Kavish)
 
-k threshold ~35%
+k threshold ~2%
 ```
 | Hash | Count |
 | --- | --- |
@@ -315,4 +315,4 @@ v100 instances unavailble since Nov 10.
 | --- | --- |
 | PBKDF2 | 32/36 |
 | sha1 | 29/31|
-| sha1 | 0/41|
+| sha512 | 05/41|
