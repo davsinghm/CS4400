@@ -313,6 +313,6 @@ v100 instances unavailble since Nov 10.
 ```
 | Hash | Count |
 | --- | --- |
-| PBKDF2 | 32/36 |
-| sha1 | 29/31|
+| PBKDF2 | 35/36 |
+| sha1 | 30/31|
 | sha512 | 05/41|
